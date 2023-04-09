@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <title></title>
-      <link rel="stylesheet" href="style.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="main.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>?</h1>
-    <form action="#">
+    <h1>今天吃什麼？</h1>
+    <!-- <form action="#">
       <input type="button" value="今天晚上吃什麼" onclick="progress()">
       <ul>
         <li>拉麵</li>
         <li>滷肉飯</li>
         <li>水餃</li>
       </ul>
-    </form>
+    </form> -->
     <div id="output"></div>
+
+    <div class="box-roulette">
+      <div class="markers"></div>
+      <button type="button" id="btn-start">旋轉</button>
+      <div class="roulette" id="roulette"></div>
+    </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https://cdn.sobekrepository.org/includes/jquery-rotate/2.2/jquery-rotate.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js'></script>
+    
+    <script src="main.js"></script>
 </html>

@@ -1,17 +1,3 @@
-var choice = -1;
-
-function progress() {
-  var numberOfListItem = $("li").length;
-  var temp = Math.floor(Math.random() * numberOfListItem);
-  while(temp == choice)
-    temp = Math.floor(Math.random() * numberOfListItem);
-  
-  choice = temp;
-
-  $("h1").text($("li").eq(choice).text());
-  $("#output").html("<img src=./" + choice + ".jpeg>");
-};
-
 (function($) {
   $.fn.extend({
 
@@ -32,51 +18,51 @@ function progress() {
         var data = [
 					{
             color: '#3f297e',
-            text: '牛肉麵'
+            text: 'N분의 1'
           },
           {
             color: '#1d61ac',
-            text: '羊肉爐'
+            text: '요즘것들'
           },
           {
             color: '#169ed8',
-            text: '炒飯'
+            text: '도박'
           },
           {
             color: '#209b6c',
-            text: '水餃'
+            text: '젓가락'
           },
           {
             color: '#60b236',
-            text: '滷肉飯'
+            text: '거북선'
           },
           {
             color: '#efe61f',
-            text: '炒麵'
+            text: '겁'
           },
           {
             color: '#f7a416',
-            text: '滷味'
+            text: 'Day Day'
           },
           {
             color: '#e6471d',
-            text: '烤鴨'
+            text: '호랑나비'
           },
           {
             color: '#dc0936',
-            text: '泡麵'
+            text: 'Okey Dokey'
           },
           {
             color: '#e5177b',
-            text: '鹽酥雞'
+            text: '오빠차'
           },
           {
             color: '#be107f',
-            text: '拉麵'
+            text: 'RESPECT'
           },
           {
             color: '#881f7e',
-            text: '壽司'
+            text: '작두'
           }
         ];
 
@@ -136,46 +122,22 @@ function progress() {
         });
 
         function rotation() {
-                            //  5 ~ 11     0 ~ 361
+
           var completeA = 360 * r(5, 10) + r(0, 360);
-          $("#output").html("");
+
           $roulette.rotate({
             angle: angle,
             animateTo: completeA,
             center: ["50%", "50%"],
             easing: $.easing.esing,
-            duration: speed,
             callback: function() {
-              // var currentA = $(this).getRotateAngle();
-              
-              if(completeA % 360 <= 15 || completeA % 360 >= 345)
-                $("#output").html('<img src="./1.jpeg">');
-              else if(completeA % 360 >= 15 && completeA % 360 <= 45)
-                $("#output").html('<img src="./2.jpeg">');
-              else if(completeA % 360 >= 45 && completeA % 360 <= 75)
-                $("#output").html('<img src="./3.jpeg">');
-              else if(completeA % 360 >= 75 && completeA % 360 <= 105)
-                $("#output").html('<img src="./4.jpeg">');
-              else if(completeA % 360 >= 105 && completeA % 360 <= 135)
-                $("#output").html('<img src="./5.jpeg">');
-              else if(completeA % 360 >= 135 && completeA % 360 <= 165)
-                $("#output").html('<img src="./6.jpeg">');
-              else if(completeA % 360 >= 165 && completeA % 360 <= 195)
-                $("#output").html('<img src="./7.jpeg">');
-              else if(completeA % 360 >= 195 && completeA % 360 <= 225)
-                $("#output").html('<img src="./8.jpeg">');
-              else if(completeA % 360 >= 225 && completeA % 360 <= 255)
-                $("#output").html('<img src="./9.jpeg">');
-              else if(completeA % 360 >= 255 && completeA % 360 <= 285)
-                $("#output").html('<img src="./10.jpeg">');
-              else if(completeA % 360 >= 285 && completeA % 360 <= 315)
-                $("#output").html('<img src="./11.jpeg">');
-              else if(completeA % 360 >= 315 && completeA % 360 <= 345)
-                $("#output").html('<img src="./12.jpeg">');
-            }
-          });
+              var currentA = $(this).getRotateAngle();
 
-          
+              console.log(currentA);
+
+            },
+            duration: speed
+          });
         }
 
         function r(min, max) {
@@ -188,8 +150,7 @@ function progress() {
 })(jQuery);
 
 $(function() {
-  $('.box-roulette').roulette();
-});
 
-// 2475-2505 羊肉爐
-// 2505-2535 牛肉麵
+  $('.box-roulette').roulette();
+
+});

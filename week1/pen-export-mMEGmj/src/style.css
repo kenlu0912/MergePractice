@@ -1,13 +1,5 @@
-body {
-  text-align: center;
-}
-
-li {
-  text-align: left;
-}
-
-img {
-  width: 40%;
+html, body, button{
+	font-family:Arial, "돋움", Dotum, "굴림", Gulim, "Apple SD Gothic Neo", AppleGothic, sans-serif;
 }
 
 button{border:0;margin:0;padding:0;}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Club Course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="progress()">
+  <h1>社團課程時間表</h1>
+  <h5>若主題為「停課」，則用灰色表示</h5>
+  <form action="#">
+    <label>
+      輸入第一天的日期：
+      <input type="date" id="inputDate" value="2023-03-01">
+    </label>
+    <input type="button" name="button" id="button" onclick="progress()" value="提交">
+  </form>
+  <table id="courseTable"></table>
+  <form action="#" id="adder">
+      新增新的活動： <input type="text" id="addEvent" placeholder="請按新增鍵新增項目">
+    <input type="button" name="button" id="button" onclick="progressAdd()" value="新增">
+  </form>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="topic.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

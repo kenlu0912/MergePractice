@@ -1,0 +1,35 @@
+* {
+  font-family: "微軟正黑體";
+}
+
+body {
+  text-align: center;
+}
+
+table {
+  width: 60%;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+td {
+  border-bottom: 1px solid blue;
+}
+
+#holiday {
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+
+#even {
+  color: green;
+  border-bottom: 1px solid green;
+}
+
+#adder {
+  margin-top: 20px;
+}
+
+#button {
+  margin-bottom: 20px;
+}
