@@ -7,76 +7,71 @@ var chameleon = 0;
 
 $(function () {
   $("#startButton").on("click", function() {
-    $("#startButton").attr("value", "下一題");
-    $("#question").text(questions[count].question);
-    document.getElementById("options").style.opacity = 1;
-    // $("#options").empty();
-    // questions[count].answers.forEach(function(element, index, array){
-    //   $("#options").append(
-    //     `<input id='r${index}' type='radio' value='${index}'><label> ${element[0]} </label>`
-    //   );
-    // });
-    $.each($(":radio"),function(i, val) {
-      if(val.checked) {
-        if(i == "0" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
-          owl += 5;
-        else if(i == "1" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
-          owl += 4;
-        else if(i == "2" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
-          owl += 3;
-        else if(i == "3" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
-          owl += 2;
-        else if(i == "4" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
-          owl++;
-
-        if(i == "0" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
-          koala += 5;
-        else if(i == "1" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
-          koala += 4;
-        else if(i == "2" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
-          koala += 3;
-        else if(i == "3" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
-          koala += 2;
-        else if(i == "4" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
-          koala++;
-
-        if(i == "0" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
-          peacock += 5;
-        else if(i == "1" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
-          peacock += 4;
-        else if(i == "2" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
-          peacock += 3;
-        else if(i == "3" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
-          peacock += 2;
-        else if(i == "4" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
-          peacock++;
-
-        if(i == "0" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
-          chameleon += 5;
-        else if(i == "1" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
-          chameleon += 4;
-        else if(i == "2" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
-          chameleon += 3;
-        else if(i == "3" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
-          chameleon += 2;
-        else if(i == "4" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
-          chameleon++;
-
-        if(i == "0" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
-          tiger += 5;
-        else if(i == "1" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
-          tiger += 4;
-        else if(i == "2" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
-          tiger += 3;
-        else if(i == "3" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
-          tiger += 2;
-        else if(i == "4" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
-          tiger++;
-        $("#question").text(questions[count].question);
-      }
-    });
-    
-    if(count >= 3) {
+    if(count < 30) {
+      $("#startButton").attr("value", "下一題");
+      $("#question").text(questions[count].question);
+      document.getElementById("options").style.opacity = 1;
+      $.each($(":radio"),function(i, val) {
+        if(val.checked) {
+          if(i == "0" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
+            owl += 5;
+          else if(i == "1" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
+            owl += 4;
+          else if(i == "2" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
+            owl += 3;
+          else if(i == "3" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
+            owl += 2;
+          else if(i == "4" && (count == 1 || count == 7 || count == 11 || count == 16 || count == 21 || count == 26))
+            owl++;
+  
+          if(i == "0" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
+            koala += 5;
+          else if(i == "1" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
+            koala += 4;
+          else if(i == "2" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
+            koala += 3;
+          else if(i == "3" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
+            koala += 2;
+          else if(i == "4" && (count == 2 || count == 8 || count == 15 || count == 17 || count == 25 || count == 28))
+            koala++;
+  
+          if(i == "0" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
+            peacock += 5;
+          else if(i == "1" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
+            peacock += 4;
+          else if(i == "2" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
+            peacock += 3;
+          else if(i == "3" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
+            peacock += 2;
+          else if(i == "4" && (count == 3 || count == 6 || count == 13 || count == 20 || count == 22 || count == 29))
+            peacock++;
+  
+          if(i == "0" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
+            chameleon += 5;
+          else if(i == "1" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
+            chameleon += 4;
+          else if(i == "2" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
+            chameleon += 3;
+          else if(i == "3" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
+            chameleon += 2;
+          else if(i == "4" && (count == 4 || count == 9 || count == 12 || count == 19 || count == 23 || count == 27))
+            chameleon++;
+  
+          if(i == "0" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
+            tiger += 5;
+          else if(i == "1" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
+            tiger += 4;
+          else if(i == "2" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
+            tiger += 3;
+          else if(i == "3" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
+            tiger += 2;
+          else if(i == "4" && (count == 5 || count == 10 || count == 14 || count == 18 || count == 24 || count == 30))
+            tiger++;
+          $("#question").text(questions[count].question);
+        }
+      });
+    }
+    else {
       $("#question").empty();
       document.getElementById("options").style.opacity = 0;
       // document.getElementById("startButton").style.opacity = 0;

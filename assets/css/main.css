@@ -2183,3 +2183,39 @@ input, select, textarea {
 			}
 
 		}
+
+
+
+		.parent {
+			width: 240px;
+			/* margin: 20px; */
+			height: 180px;
+			/* border: 1px solid blue;  */
+			overflow: hidden;
+			position: relative;
+			cursor: pointer;
+	}
+	
+	.child {
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			-webkit-transition: all .5s;
+			-moz-transition: all .5s;
+			-o-transition: all .5s;
+			transition: all .5s;
+	}
+	
+	.parent:hover .child, .parent:focus .child {
+			-ms-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+	}
+	
+	
+	
+	
+	

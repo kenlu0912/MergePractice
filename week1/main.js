@@ -190,6 +190,3 @@ function progress() {
 $(function() {
   $('.box-roulette').roulette();
 });
-
-// 2475-2505 羊肉爐
-// 2505-2535 牛肉麵

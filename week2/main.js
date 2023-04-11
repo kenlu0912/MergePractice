@@ -49,7 +49,9 @@ function progress() {
 }
 
 function progressAdd() {
+  
   topic.push(document.forms[1].addEvent.value);
   updateTable();
+  document.getElementById("addEvent").value = "";
 }
 // 用ajax解決網頁跳轉問題
